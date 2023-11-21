@@ -14,4 +14,6 @@ console.log(linkedList.atIndex(0));
 console.log(linkedList.atIndex(2));
 console.log(linkedList.atIndex(5));
 console.log(linkedList.atIndex(7));
+linkedList.pop();
+console.log(linkedList.getTail());
 console.log(linkedList.toString());

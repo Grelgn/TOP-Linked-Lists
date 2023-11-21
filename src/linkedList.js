@@ -93,6 +93,13 @@ export default class LinkedList {
 	}
 
 	toString() {
-		return `( ${this.head.nextNode.value} ) => ( ${this.head.nextNode.nextNode.value} ) => ( ${this.tail.value} )`;
+		let string = "";
+        let currentNode = this.head.nextNode;
+		while (currentNode !== null) {
+			string += `( ${currentNode.value} ) -> `
+			currentNode = currentNode.nextNode;
+		}
+        string += "null";
+        return string;
 	}
 }

@@ -117,4 +117,18 @@ export default class LinkedList {
 			i++;
 		}
     }
+
+    removeAt(index) {
+        let i = 0;
+		let currentNode = this.head.nextNode;
+		while (currentNode !== null) {
+			if (i === index) {
+                this.atIndex(i - 1).nextNode = currentNode.nextNode;
+                currentNode = null;
+                return;
+			}
+			currentNode = currentNode.nextNode;
+			i++;
+		}
+    }
 }

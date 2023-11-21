@@ -25,3 +25,5 @@ console.log(linkedList.find("test4"));
 console.log(linkedList.toString());
 linkedList.insertAt("test7", 3);
 console.log(linkedList.toString());
+linkedList.removeAt(1);
+console.log(linkedList.toString());

@@ -40,6 +40,19 @@ export default class LinkedList {
 		return this.tail;
 	}
 
+	atIndex(index) {
+		let i = 0;
+		let currentNode = this.head.nextNode;
+		while (currentNode !== null) {
+			if (i === index) {
+				return currentNode;
+			}
+			currentNode = currentNode.nextNode;
+			i++;
+		}
+		return null;
+	}
+
 	toString() {
 		return `( ${this.head.nextNode.value} ) => ( ${this.head.nextNode.nextNode.value} ) => ( ${this.tail.value} )`;
 	}

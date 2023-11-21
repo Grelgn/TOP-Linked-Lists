@@ -10,4 +10,8 @@ linkedList.prepend("test6");
 console.log(linkedList.size());
 console.log(linkedList.getHead());
 console.log(linkedList.getTail());
+console.log(linkedList.atIndex(0));
+console.log(linkedList.atIndex(2));
+console.log(linkedList.atIndex(5));
+console.log(linkedList.atIndex(7));
 console.log(linkedList.toString());

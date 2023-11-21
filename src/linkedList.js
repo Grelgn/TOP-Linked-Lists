@@ -12,15 +12,25 @@ export default class LinkedList {
 			this.tail = newNode;
 		} else {
 			this.tail.nextNode = newNode;
-            this.tail = newNode;
+			this.tail = newNode;
 		}
 	}
 
-    prepend(value) {
-        const newNode = new Node(value);
-        newNode.nextNode = this.head.nextNode;
-        this.head.nextNode = newNode;
-    }
+	prepend(value) {
+		const newNode = new Node(value);
+		newNode.nextNode = this.head.nextNode;
+		this.head.nextNode = newNode;
+	}
+
+	size() {
+		let size = 0;
+		let currentNode = this.head.nextNode;
+		while (currentNode !== null) {
+			size++;
+			currentNode = currentNode.nextNode;
+		}
+		return size;
+	}
 
 	toString() {
 		return `( ${this.head.nextNode.value} ) => ( ${this.head.nextNode.nextNode.value} ) => ( ${this.tail.value} )`;

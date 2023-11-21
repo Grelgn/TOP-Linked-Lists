@@ -7,4 +7,5 @@ linkedList.append("test3");
 linkedList.append("test4");
 linkedList.prepend("test5");
 linkedList.prepend("test6");
+console.log(linkedList.size())
 console.log(linkedList.toString());

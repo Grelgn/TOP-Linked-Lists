@@ -32,6 +32,14 @@ export default class LinkedList {
 		return size;
 	}
 
+	getHead() {
+		return this.head.nextNode;
+	}
+
+	getTail() {
+		return this.tail;
+	}
+
 	toString() {
 		return `( ${this.head.nextNode.value} ) => ( ${this.head.nextNode.nextNode.value} ) => ( ${this.tail.value} )`;
 	}

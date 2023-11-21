@@ -16,6 +16,12 @@ export default class LinkedList {
 		}
 	}
 
+    prepend(value) {
+        const newNode = new Node(value);
+        newNode.nextNode = this.head.nextNode;
+        this.head.nextNode = newNode;
+    }
+
 	toString() {
 		return `( ${this.head.nextNode.value} ) => ( ${this.head.nextNode.nextNode.value} ) => ( ${this.tail.value} )`;
 	}

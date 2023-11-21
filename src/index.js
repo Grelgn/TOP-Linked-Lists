@@ -23,3 +23,5 @@ console.log(linkedList.find("test2"));
 console.log(linkedList.find("test5"));
 console.log(linkedList.find("test4"));
 console.log(linkedList.toString());
+linkedList.insertAt("test7", 3);
+console.log(linkedList.toString());
